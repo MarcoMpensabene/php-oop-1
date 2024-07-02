@@ -17,7 +17,7 @@ class Movie
         $this->airedFirstTime = $airedFirstTime;
         $this->budget = $budget;
         $this->moneyGained = $moneyGained;
-        $this->genre = $genre;
+        $this->genre = is_array($genre) ? $genre : [$genre]; // ! ternario che controlla se la variabile è un array e lo trasforma di conseguenza
         $this->duration = $duration;
     }
 
